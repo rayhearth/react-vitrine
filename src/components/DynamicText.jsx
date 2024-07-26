@@ -22,7 +22,7 @@ const DynamicText = () => {
     };
 
     const loop = () => {
-      setTimeout(() => {
+  
         if (wordIndex >= array.length) {
           wordIndex = 0;
           letterIndex = 0;
@@ -37,9 +37,13 @@ const DynamicText = () => {
           wordIndex++;
           setTimeout(loop, 2000);
         }
-      }, 80);
+
     };
-    loop();
+
+    const interval = setInterval(loop, 80);
+
+    return () => clearInterval(interval)
+  
   }, []);
 
   return (
