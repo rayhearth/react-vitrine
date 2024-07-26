@@ -11,7 +11,7 @@ const SocialNetwork = () => {
 				}px)`;
 			});
 
-			link.addEventListener("mouseleave", (e) => {
+			link.addEventListener("mouseleave", () => {
 				link.style.transform = ``;
 			});
 		});
