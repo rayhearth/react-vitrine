@@ -27,8 +27,7 @@ const DynamicText = () => {
           wordIndex = 0;
           letterIndex = 0;
           loop();
-        } 
-        if (letterIndex < array[wordIndex].length) {
+        } else if (letterIndex < array[wordIndex].length) {
           createLetter();
           letterIndex++;
           loop();
