@@ -8,7 +8,7 @@ const ContactForm = () => {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-		const formMess = document.querySelector(".form-message");
+		const formMess = document.querySelector(".formMessage");
 
 		emailjs
 			.sendForm("service_peqyvrd", "template_7s41sin", form.current, {
@@ -16,7 +16,6 @@ const ContactForm = () => {
 			})
 			.then(
 				(result) => {
-					// console.log("SUCCESS!");
 					form.current.reset();
 					formMess.innerHTML = `<p class='success'> Message envoyé !</p>`;
 					setTimeout(() => {
@@ -24,7 +23,6 @@ const ContactForm = () => {
 					}, 2500);
 				},
 				(error) => {
-					// console.log("FAILED...", error.text);
 					formMess.innerHTML =
 						"<p class= 'error'> Une erreur s'est produite, veuillez réessayer</p>";
 					setTimeout(() => {
@@ -46,7 +44,7 @@ const ContactForm = () => {
 				<textarea name="message" id='mess'/>
 				<input type="submit" value="Envoyer" className='hover button'/>
 			</form>
-			<div className="form-message"></div>
+			<div className="formMessage"></div>
 		</div>
 	);
 };
