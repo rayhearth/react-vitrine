@@ -16,7 +16,7 @@ const Contact = () => {
 		},
 		out: {
 			opacity: 0,
-			x: 300,
+			x: 200,
 		},
 	};
 
