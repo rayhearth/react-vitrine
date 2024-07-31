@@ -6,12 +6,31 @@ import Navigation from "../components/Navigation";
 import ContactForm from "../components/ContactForm";
 import SocialNetwork from "../components/SocialNetwork";
 import Buttons from "../components/Buttons";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+	const pageTransition = {
+		in: {
+			opacity: 1,
+			x: 0,
+		},
+		out: {
+			opacity: 0,
+			x: 300,
+		},
+	};
+
 	return (
 		<main>
 			<Mouse />
-			<div className="contact">
+			<motion.div
+				className="contact"
+				initial="out"
+				exit="out"
+				animate="in"
+				variants={pageTransition}
+				transition={{duration:0.5}}
+			>
 				<Navigation />
 				<Logo />
 				<ContactForm />
@@ -57,7 +76,7 @@ const Contact = () => {
 					</div>
 				</div>
 				<Buttons left={"/project-4"} />
-			</div>
+			</motion.div>
 		</main>
 	);
 };
