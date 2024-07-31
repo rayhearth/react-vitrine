@@ -4,7 +4,7 @@ import Logo from "../components/Logo";
 import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
 import ContactForm from "../components/ContactForm";
-import SocialNetwork from '../components/SocialNetwork'
+import SocialNetwork from "../components/SocialNetwork";
 import Buttons from "../components/Buttons";
 
 const Contact = () => {
@@ -37,10 +37,10 @@ const Contact = () => {
 							</CopyToClipboard>
 						</div>
 					</div>
-          <div className="email">
-            <div className="content">
-              <h4>email</h4>
-              <CopyToClipboard text="fsagensy@gmail.com" className="hover">
+					<div className="email">
+						<div className="content">
+							<h4>email</h4>
+							<CopyToClipboard text="fsagensy@gmail.com" className="hover">
 								<p
 									style={{ cursor: "pointer" }}
 									className="clipboard"
@@ -49,14 +49,14 @@ const Contact = () => {
 									fsagensy@gmail.com
 								</p>
 							</CopyToClipboard>
-            </div>
-          </div>
-          <SocialNetwork/>
-          <div className="credits">
-            <p>Jemma - 2024</p>
-          </div>
+						</div>
+					</div>
+					<SocialNetwork />
+					<div className="credits">
+						<p>Jemma - 2024</p>
+					</div>
 				</div>
-        <Buttons left={"/project-4"}/>
+				<Buttons left={"/project-4"} />
 			</div>
 		</main>
 	);

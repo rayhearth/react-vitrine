@@ -17,14 +17,14 @@ const ContactForm = () => {
 			.then(
 				(result) => {
 					form.current.reset();
-					formMess.innerHTML = `<p class='success'> Message envoyé !</p>`;
+					formMess.innerHTML = `<p className='success'> Message envoyé !</p>`;
 					setTimeout(() => {
 						formMess.innerHTML = "";
 					}, 2500);
 				},
 				(error) => {
 					formMess.innerHTML =
-						"<p class= 'error'> Une erreur s'est produite, veuillez réessayer</p>";
+						"<p className= 'error'> Une erreur s'est produite, veuillez réessayer</p>";
 					setTimeout(() => {
 						formMess.innerHTML = "";
 					}, 2500);
